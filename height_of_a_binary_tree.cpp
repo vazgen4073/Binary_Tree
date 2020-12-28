@@ -43,7 +43,8 @@ class Node {
     void height_helper(Node* root, int& max_height, int counter)
     {
         if (root->left == nullptr && root->right == nullptr) {
-            max_height = counter;
+           	if (counter > max_height)
+	       	max_height = counter;
         }
         counter++;
         if (root->left != nullptr) {
